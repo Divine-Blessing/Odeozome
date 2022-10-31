@@ -302,3 +302,117 @@
 }
 
 /* kalam and raleway #141414 */
+
+/* MEDIA QUERY */
+@media(max-width: 800px){
+    #navbar button{
+        height: 18px;
+        right: 20px;
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 45px;
+        right: -5px;
+    }
+    .links{
+        padding: 130px 0 0 0;
+    }
+    #navbar .links a{
+        font-size: 18px;
+    }
+    #navbar .links a img{
+        height: 22px;
+    }
+    #hero {
+        padding: 0 0 0 80px;
+    }
+    #hero h1{
+        font-size: 30px;
+    }
+    #hero h2{
+        font-size: 41px;
+    }
+    #hero p{
+        margin: 10px 0 25px 0;
+        font-size: 16px;
+        line-height: 23px;
+        width: 62%;
+    }
+    #hero a{
+        height: 45px;
+        width: 150px;
+        font-size: 16px;
+    }
+    #footer .logodiv{
+        margin-right: 18px;
+    }
+    #footer .logodiv img{
+        height: 30px;
+    }
+    #footer a{
+        font-size: 16px;
+    }
+    #footer .logo{
+        margin-right: 3px;
+        margin-left: 5px;
+    }
+    #footer .git{
+        height: 22px;
+    }
+    #footer .twi{
+        height: 18px;
+    }
+    #footer .gitlog{
+        margin-right: 15px;
+    }
+    
+}
+@media(max-width: 650px){
+    #navbar button{
+        height: 15px;
+        width: 80px;
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 40px;
+        top: 42.5px;
+        right: -20.5px;
+    }
+    .links{
+        padding: 120px 0 0 0;
+        inset: 0 0 0 70%;
+        backdrop-filter: blur(5px);
+    }
+    #navbar .links a{
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+    #navbar .links a img{
+        height: 20px;
+    }
+    #hero {
+        padding: 0 0 0 50px;
+    }
+    #hero h1{
+        font-size: 27px;
+    }
+    #hero h2{
+        font-size: 37px;
+    }
+    #hero p{
+        margin: 10px 0 25px 0;
+        font-size: 15px;
+        line-height: 22px;
+        width: 62%;
+    }
+    #hero a{
+        height: 40px;
+        width: 140px;
+        font-size: 13px;
+    }
+    #footer{
+        left: 50px;
+    }
+    #footer a{
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
