@@ -1,0 +1,775 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Kalam&family=Montserrat:wght@300;400;500&family=Ms+Madi&family=Qwitcher+Grypen:wght@400;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,400&display=swap');
+*, *::after, *::before{
+    padding: o;
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ms Madi', cursive;
+    font-family: 'Qwitcher Grypen', cursive;
+    font-family: 'Kalam', cursive;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background-image: url(../img/hero-bg\ \(2\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* THE NAVBAR FOR SMALLER SIZES */
+#navbar{
+    display: none;
+    /* display: flex; */
+    min-height: 10vh;
+    width: 100%;
+    padding: 0 40px;
+    position: fixed;
+    justify-content: flex-end;
+}
+#navbar button{
+    background-image: url(../img/hamburger-open.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20px;
+    width: 100px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    top: 55px;
+    right: 35px;
+}
+#navbar button[aria-expanded="true"]{
+    background-image: url(../img/icons8-x-80\ 1.png);
+    height: 50px;
+    width: 120px;
+    top: 40px;
+    right: 10px;
+}
+.links{
+    position: fixed;
+    padding: 200px 0 0 0;
+    inset: 0 0 0 70%;
+    background-color: transparent;
+    transform: translateX(100%);
+    transition: transform 350ms ease-in;
+}
+.links[data-visible="true"]{
+    transform: translateX(0%);
+}
+#navbar .links a{
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+#navbar .links a:hover{
+    color: white;
+}
+#navbar .links a img{
+    height: 25px;
+    margin-left: 5px;
+    visibility: hidden;
+}
+#navbar .links a:hover img{
+    visibility: visible;
+}
+/* END OF THE NAVBAR FOR THE SMALLER RESOLUTION */
+#works{
+    display: flex;
+    min-height: 100vh;
+}
+/* THE LEFT SECTION SHOWING MY WORKS DONE */
+#works .left{
+    position: relative;
+    width: 70%;
+    height: 90vh;
+    padding: 4rem;
+    display: grid;
+    grid-template-rows: repeat(5, 130px);
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-gap: .5rem;
+    grid-template-areas: 
+    'a a c d'
+    'b b c d'
+    'e g g h'
+    'e f f h'
+    'i i i i'
+    ;
+    justify-items: stretch;
+    align-items: stretch;
+    scroll-behavior: smooth;
+    overflow: scroll;
+}
+::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
+}
+#works .left a{
+    text-decoration: none;
+}
+#works .left .box{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+#works .left .box::after{
+    content: '';
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0 ;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 600ms ease-in-out;
+}
+#works .left .box:hover::after{
+    transform-origin: center;
+    transform: scale(1);
+}
+#works .left .box1::after{
+    content: 'My replica of Zuri website - 2022';
+}
+#works .left .box2::after{
+    content: 'A model page built as a task - 2021';
+}
+#works .left .box3::after{
+    content: 'My first web portfolio - 2020';
+}
+#works .left .box4::after{
+    content: 'Ruppy Gadget - 2021';
+}
+#works .left .box5::after{
+    content: 'A mech-template website built as a task - 2021';
+}
+#works .left .box6::after{
+    content: 'Leatherfy - 2023';
+}
+#works .left .box7::after{
+    content: 'A template built as a task - 2021 ';
+}
+#works .left .box8::after{
+    content: 'Interactive card website done as a task - 2022';
+    padding: 0 5px;
+}
+#works .left .box9::after{
+    content: 'Website done as a personal task - 2022';
+}
+#works .left .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+    z-index: 10000;
+}
+#works .left .content p{
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0 5px;
+}
+#works .left .box1{
+    grid-area: a;
+    background-image: url(../img/work-images/ZuriReplica.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#works .left .box2{
+    grid-area: b;
+    background-image: url(../img/work-images/kodeCamp\ work.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#works .left .box3{
+    grid-area: c;
+    background-image: url(../img/work-images/old\ resume.png);
+    background-repeat: no-repeat;   
+    background-size: cover;
+    background-position: -11px ;
+}
+#works .left .box4{
+    grid-area: d;
+    background-image: url(../img/work-images/ruppy\ gadgets.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#works .left .box5{
+    grid-area: e;
+    background-image: url(../img/work-images/finsweet.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#works .left .box6{
+    grid-area: f;
+    background-image: url(../img/work-images/leatherfy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -10px;
+}
+#works .left .box7{
+    grid-area: g;
+    background-image: url(../img/work-images/activity7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#works .left .box8{
+    grid-area: h;
+    background-image: url(../img/work-images/interactivecard.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -150px;
+}
+#works .left .box9{
+    grid-area: i;
+    background-image: url(../img/work-images/fementor-work.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -10rem;
+}
+/* END OF THE LEFT SECTION SHOWING MY WORK DONE */
+/* FOR THE ABSOLUTE IMAGE */
+#works .abs-sign{
+    position: absolute;
+    right: 23rem;
+    bottom: 21rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: scroll 2.5s infinite;
+    transition: animation 250ms ease-in-out;
+}
+#works .abs-sign img{   
+    width: 35px;
+    margin-bottom: 8px;
+}
+#works .abs-sign p{
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: .5px;
+    font-family: 'Kalam', cursive;
+}
+@keyframes scroll{
+    0%, 25%{
+        transform: translateY(0);
+    }
+    30%, 50%{
+        transform: translateY(30%);
+    }
+    55%, 75%{
+        transform: translateY(0);
+    }
+    80%, 100%{
+        transform: translateY(30%);
+    }
+}
+/* END OF THE ABSOLUTE IMAGE */
+/* THE RIGHT SECTION FOR THE LINKS */
+#works .right{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 6.25rem;
+    height: 100vh;
+}
+#works .right a{
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 30px;
+    font-size: 18px;
+    width: 180px;
+}
+#works .right hr{
+    height: 2px;
+    margin-left: 8px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 200ms ease-in-out;
+    width: 50px;
+}
+#works .right a:hover .vis{
+    width: 90px;
+    background-color: white;
+    opacity: 1;
+}
+#works  .right .notcurrent:hover{
+    color: white;
+}
+#works  .right .current{
+    color: white;
+}
+#works  .right .current hr{
+    background-color: white;
+    opacity: 1;
+    width: 90px;
+}
+/* THE END OF THE RIGHT SECTION FOR THE LINKS */
+/* FOOTER SECTION */
+#footer{
+    min-height: 8vh;
+    position: fixed;
+    bottom: 15px;
+    left: 100px;
+}
+#footer .logodiv{
+    margin-right: 20px;
+}
+#footer .logodiv img{
+    height: 34px;
+}
+#footer a:hover img{
+    zoom: 80%;
+}
+#footer .git{
+    height: 24px;
+    margin: 0 10px;
+}
+#footer .twi{
+    height: 19px;
+}
+/* END OF THE FOOTER SECTION */
+
+/* RESPONSIVENESS STARTS HERE */
+@media(max-width: 1290px){
+/* FOR THE ABSOLUTE IMAGE */
+    #works .abs-sign{
+        right: 20rem;
+        bottom: 19rem;
+    }   
+}
+
+@media (max-width: 1110px) {
+/* FOR THE ABSOLUTE IMAGE */
+    #works .abs-sign{
+        right: 14.5rem;
+    }   
+/* THE LEFT SECTION SHOWING MY WORKS DONE */
+    #works .left{
+        width: 75%;
+    }
+/* THE RIGHT SECTION FOR THE LINKS */
+    #works .right{
+        width: 25%;
+        padding-right: 4rem;
+    }
+    #works .right a{
+        margin-bottom: 25px;
+    }
+}
+
+@media(max-width: 1000px){
+/* FOR THE ABSOLUTE IMAGE */
+    #works .abs-sign{
+        right: 13.5rem;
+    }   
+    #works .abs-sign img{
+        width: 30px;
+    }
+    #works .abs-sign p{
+        font-size: 14px;
+    }
+/* THE RIGHT SECTION FOR THE LINKS */
+    #works .right{
+        padding-right: 3.25rem;
+    }
+    #works .right a{
+        font-size: 17px;
+        width: 160px;
+    }
+    #works .right hr{
+        width: 30px;
+    }
+    #works .right a:hover .vis{
+        width: 60px;
+    }
+    #works  .right .current hr{
+        width: 60px;
+    }
+}
+@media(max-width: 930px){
+/* FOR THE ABSOLUTE IMAGE */
+    #works .abs-sign{
+        right: 12.5rem;
+    }
+}
+
+/* FROM HERE WE MAKE THE NAVBAR A HAMBURGER SLIDEBARB */
+@media(max-width: 910px){
+    /* THE NAVBAR */
+    #navbar{
+        display: flex;
+        z-index: 1000;
+    }
+    #navbar button{
+        height: 20px;
+        width: 60px;
+        top: 3.7rem;
+        right: 2rem;
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 50px;
+        width: 100px;
+        top: 2.75rem;
+        right: -0.8rem;
+    }
+    .links{
+        padding: 10rem 0 0 0;
+        inset: 0 0 0 80%;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+    }
+    #navbar .links a{
+        font-size: 20px;
+    }
+    #navbar .links a img{
+        height: 20px;
+    }
+    /* THE LEFT SECTION SHOWING MY WORKS DONE */
+    #works .left{
+        width: 85%;
+    }
+    /* FOR THE ABSOLUTE IMAGE */
+    #works .abs-sign{
+        right: 5rem;
+    }
+    /* THE RIGHT SECTION FOR THE LINKS */
+    #works .right{
+        display: none;
+    }
+}
+
+@media(max-width: 800px){
+    #navbar .links a{
+        font-size: 18px;
+    }
+}
+@media(max-width: 768px){
+/* FOR THE ABSOLUTE IMAGE */
+    #works .abs-sign{
+        right: 3.5rem;
+    }
+    #works .abs-sign img{
+        width: 25px;
+    }
+    #works .abs-sign p{
+        font-weight: 13px;
+    }
+    /* FOOTER */
+    #footer{
+        bottom: 10px;
+        left: 4rem;
+    }
+    #footer .logodiv{
+        margin-right: 10px;
+    }
+    #footer .logodiv img{
+        height: 30px;
+    }
+    #footer .git{
+        height: 20px;
+    }
+    #footer .twi{
+        height: 18px;
+    }
+    #footer .ema{
+        height: 35px;
+    }
+}
+
+@media(max-width: 740px){
+    /* THE NAVBAR */
+    #navbar button{
+        /* height: 20px; */
+        width: 45px;
+        /* top: 3.7rem; */
+        right: 2.5rem;
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 40px;
+        /* width: 100px; */
+        /* top: 2.75rem; */
+        right: -1.1rem;
+    }
+    #navbar .links a{
+        font-size: 18px;
+    }
+    #navbar .links a img{
+        height: 19px;
+    }
+    /* THE LEFT SECTION SHOWING MY WORKS DONE */
+    #works .left{
+        width: 85%;
+        padding: 3rem;
+        grid-gap: .4rem;
+    }
+    /* FOR THE ABSOLUTE IMAGE */
+    #works .abs-sign{
+        right: 2.8rem;
+    }
+}
+@media(max-width: 600px){
+    #works .left{
+        display: grid;
+        grid-template-rows: repeat(5, 100px);
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        grid-template-areas: 
+        'a a c d'
+        'b b c d'
+        'e g g h'
+        'e f f h'
+        'i i i i'
+        ;
+        justify-items: stretch;
+        align-items: stretch;
+        scroll-behavior: smooth;
+        overflow: scroll;
+    }
+    #works .left .box6{
+        background-position: center;
+    }
+    #works .left .box8{
+        background-position: center;
+    }
+    #works .left .box9{
+        background-position: center;
+    }
+    #works .left .content p{
+        font-size: 11px;
+        color: yellow;
+    }
+}
+@media(max-width: 550px){
+    #works .left{
+        display: grid;
+        grid-template-rows: repeat(5, 100px);
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        grid-template-areas: 
+        'a a b b'
+        'c c d d'
+        'e e f f'
+        'g g i i'
+        'h h h h'
+        ;
+    }    
+}
+@media(max-width: 500px){
+    /* THE NAVBAR */
+    #navbar button{
+        height: 20px;
+        width: 40px;
+        right: 2rem;
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 40px;
+        width: 90px;
+        right: -1.2rem;
+    }
+    .links{
+        inset: 0 0 0 70%;
+    }
+    #navbar .links a{
+        font-size: 16px;
+    }
+    #navbar .links a img{
+        height: 18px;
+    }
+    /* FOR THE ABSOLUTE IMAGE */
+    #works .abs-sign{
+        right: 2rem;
+    }
+    #works .abs-sign img{
+        width: 17px;
+    }
+    #works .abs-sign p{
+        font-size: 13px;
+    }
+}
+@media(max-width: 425px){
+    /* THE NAVBAR */
+    #navbar button{
+        height: 20px;
+        width: 30px;
+        right: 2rem;
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 30px;
+        width: 70px;
+        top: 3rem;
+        right: -0.8rem;
+    }
+    .links{
+        inset: 0 0 0 70%;
+        padding: 8rem 0 0 0 ;
+    }
+    #navbar .links a{
+        font-size: 15px;
+    }
+    #navbar .links a img{
+        height: 17px;
+    }
+    /* FOR THE ABSOLUTE IMAGE */
+    #works .abs-sign{
+        right: 1.7rem;
+    }
+    #works .abs-sign p{
+        font-size: 11px;
+    }
+    /* FOOTER SECTION */
+    #footer{
+        left: 50px;
+    }
+    #footer .logodiv{
+        margin-right: 10px;
+    }
+    #footer .logodiv img{
+        height: 25px;
+    }
+    #footer .git{
+        height: 20px;
+        margin: 0 10px;
+    }
+    #footer .twi{
+        height: 16px;
+    }
+    #footer .ema{
+        height: 32px;
+    }
+}
+@media(max-width: 370px){
+    #works .left{
+        grid-template-rows: repeat(5, 100px);
+        grid-template-columns: repeat(auto-fit, minmax(50px, 50px));
+    }
+}
+@media(max-width: 340px){
+    #works .left{
+        grid-template-rows: repeat(5, 80px);
+        grid-template-columns: repeat(auto-fit, minmax(50px, 50px));
+        width: 75%;
+        padding: 3rem 1.5rem;
+    }
+    /* THE NAVBAR */
+    #navbar button{
+        width: 30px;
+        top: 3rem;
+        right: 2rem;
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 30px;
+        width: 80px;
+        top: 2.4rem;
+        right: -1.3rem;
+    }
+    #navbar .links{
+        padding: 7rem 0;
+    }
+    #navbar .links a{
+        margin: 10px 0;
+    }
+    /* FOR THE ABSOLUTE IMAGE */
+    #works .abs-sign{
+        right: 1rem;
+    }
+    /* FOOTER SECTION */
+    #footer{
+        left: 25px;
+    }
+    #footer .logodiv{
+        margin-right: 3px;
+    }
+}
+@media(max-width: 300px){
+    #works .left{
+        grid-template-rows: repeat(5, 70px);
+        grid-template-columns: repeat(auto-fit, minmax(40px, 40px));
+        width: 76%;
+        padding: 3rem 1.2rem;
+    }
+    #navbar .links a{
+        margin: 9px 0;
+        font-size: 13px;
+    }
+    /* FOR THE ABSOLUTE IMAGE */
+    #works .abs-sign{
+        right: 1.5rem;
+    }
+    #works .abs-sign p{
+        font-size: 9px;
+    }
+    /* FOOTER SECTION */
+    #footer .logodiv{
+        margin-right: 3px;
+    }
+    #footer .logodiv img{
+        height: 23px;
+    }
+    #footer .git{
+        height: 19px;
+        margin: 0 6px;
+    }
+    #footer .twi{
+        height: 15px;
+    }
+    #footer .ema{
+        height: 31px;
+    }
+}
+@media(max-width: 270px){
+    #works .left{
+        grid-template-rows: repeat(5, 70px);
+        grid-template-columns: repeat(auto-fit, minmax(40px, 40px));
+        width: 83%;
+        padding: 3rem 1.2rem;
+    }
+    /* THE NAVBAR */
+    #navbar button{
+        height: 20px;
+        width: 30px;
+        right: .8rem;
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 30px;
+        width: 70px;
+        top: 2.5rem;
+        right: -1.9rem;
+    }
+    #navbar .links{
+        inset: 0 0 0 60%;
+        padding: 6rem 0 ;
+    }
+    #navbar .links a{
+        margin: 9px 0;
+        font-size: 13px;
+    }
+    /* FOR THE ABSOLUTE IMAGE */
+    #works .abs-sign{
+        display: none;
+    }
+}
+@media(max-width: 230px){
+    #works .left{
+        grid-template-rows: repeat(5, 60px);
+        grid-template-columns: repeat(auto-fit, minmax(35px, 35px));
+    }
+}
