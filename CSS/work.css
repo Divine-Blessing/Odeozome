@@ -19,7 +19,6 @@ body{
 /* THE NAVBAR FOR SMALLER SIZES */
 #navbar{
     display: none;
-    /* display: flex; */
     min-height: 10vh;
     width: 100%;
     padding: 0 40px;
@@ -65,8 +64,9 @@ body{
     font-size: 22px;
     font-family: 'Inter', sans-serif;
     cursor: pointer;
+    position: relative;
 }
-#navbar .links a:hover{
+/* #navbar .links a:hover{
     color: white;
 }
 #navbar .links a img{
@@ -76,6 +76,32 @@ body{
 }
 #navbar .links a:hover img{
     visibility: visible;
+} */
+#navbar .links a:hover{
+    color: #6243e6;
+}
+#navbar .links a::after{
+    content: '';
+    height: 2px;
+    width: 100%;
+    border-radius: 50px;
+    background-color: #6243e6;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 400ms ease;
+}
+#navbar .links a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+#navbar .links .art{
+    color: #6243e6;
+}
+#navbar .links .art::after{
+    transform: scaleX(1);
 }
 /* END OF THE NAVBAR FOR THE SMALLER RESOLUTION */
 #works{
@@ -338,12 +364,15 @@ body{
 #footer .logodiv img{
     height: 34px;
 }
+#footer a img{
+    margin-right: 10px;
+}
 #footer a:hover img{
-    zoom: 80%;
+    transform: scale(1.3) ;
+    transition: transform 250ms ease-in;
 }
 #footer .git{
     height: 24px;
-    margin: 0 10px;
 }
 #footer .twi{
     height: 19px;
@@ -434,16 +463,14 @@ body{
         right: -0.8rem;
     }
     .links{
-        padding: 10rem 0 0 0;
+        padding: 9rem 0 0 0;
         inset: 0 0 0 80%;
         background-color: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(5px);
     }
     #navbar .links a{
-        font-size: 20px;
-    }
-    #navbar .links a img{
-        height: 20px;
+        font-size: 18px;
+        margin-bottom: 10px;
     }
     /* THE LEFT SECTION SHOWING MY WORKS DONE */
     #works .left{
@@ -460,12 +487,60 @@ body{
 }
 
 @media(max-width: 800px){
+    #navbar button{
+        height: 18px;
+        right: 20px;
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 45px;
+        right: -5px;
+    }
+    .links{
+        padding: 140px 0 0 0;
+        inset: 0 0 0 80%;
+    }
     #navbar .links a{
-        font-size: 18px;
+        font-size: 17px;
+    }
+    #footer .logodiv{
+        margin-right: 18px;
+    }
+    #footer .logodiv img{
+        height: 30px;
+    }
+    #footer a{
+        font-size: 16px;
+    }
+    #footer .logo{
+        margin-right: 3px;
+        margin-left: 5px;
+    }
+    #footer .git{
+        height: 22px;
+    }
+    #footer .twi{
+        height: 18px;
     }
 }
-@media(max-width: 768px){
-/* FOR THE ABSOLUTE IMAGE */
+@media(max-width: 770px){
+    #navbar button{
+        height: 16px;
+        width: 50px;
+        top: 3rem;
+        right: 2rem;
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 40px;
+        width: 100px;
+        top: 2.3rem;
+        right: -1.3rem;
+    }
+    .links{
+        padding: 8rem 0 0 0;
+    }
+    #navbar .links a{
+        margin-bottom: 15px;
+    }
     #works .abs-sign{
         right: 3.5rem;
     }
@@ -475,48 +550,9 @@ body{
     #works .abs-sign p{
         font-weight: 13px;
     }
-    /* FOOTER */
-    #footer{
-        bottom: 10px;
-        left: 4rem;
-    }
-    #footer .logodiv{
-        margin-right: 10px;
-    }
-    #footer .logodiv img{
-        height: 30px;
-    }
-    #footer .git{
-        height: 20px;
-    }
-    #footer .twi{
-        height: 18px;
-    }
-    #footer .ema{
-        height: 35px;
-    }
 }
 
 @media(max-width: 740px){
-    /* THE NAVBAR */
-    #navbar button{
-        /* height: 20px; */
-        width: 45px;
-        /* top: 3.7rem; */
-        right: 2.5rem;
-    }
-    #navbar button[aria-expanded="true"]{
-        height: 40px;
-        /* width: 100px; */
-        /* top: 2.75rem; */
-        right: -1.1rem;
-    }
-    #navbar .links a{
-        font-size: 18px;
-    }
-    #navbar .links a img{
-        height: 19px;
-    }
     /* THE LEFT SECTION SHOWING MY WORKS DONE */
     #works .left{
         width: 85%;
@@ -528,6 +564,17 @@ body{
         right: 2.8rem;
     }
 }
+
+@media(max-width: 650px){
+    #footer{
+        left: 50px;
+    }
+    #footer a{
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+
 @media(max-width: 600px){
     #works .left{
         display: grid;
@@ -559,7 +606,14 @@ body{
         color: yellow;
     }
 }
+
 @media(max-width: 550px){
+    .links{
+        inset: 0 0 0 75%;
+    }
+    #navbar .links a{
+        font-size: 16px
+    }
     #works .left{
         display: grid;
         grid-template-rows: repeat(5, 100px);
@@ -573,26 +627,29 @@ body{
         ;
     }    
 }
+
 @media(max-width: 500px){
     /* THE NAVBAR */
     #navbar button{
         height: 20px;
         width: 40px;
         right: 2rem;
+        top: 2.8rem;
     }
     #navbar button[aria-expanded="true"]{
         height: 40px;
         width: 90px;
         right: -1.2rem;
+        top: 2rem;
     }
     .links{
-        inset: 0 0 0 70%;
+        inset: 0 0 0 78%;
     }
     #navbar .links a{
-        font-size: 16px;
+        font-size: 15px;
     }
     #navbar .links a img{
-        height: 18px;
+        display: none;
     }
     /* FOR THE ABSOLUTE IMAGE */
     #works .abs-sign{
@@ -605,29 +662,15 @@ body{
         font-size: 13px;
     }
 }
-@media(max-width: 425px){
-    /* THE NAVBAR */
-    #navbar button{
-        height: 20px;
-        width: 30px;
-        right: 2rem;
-    }
-    #navbar button[aria-expanded="true"]{
-        height: 30px;
-        width: 70px;
-        top: 3rem;
-        right: -0.8rem;
-    }
+
+@media(max-width: 460px){
     .links{
-        inset: 0 0 0 70%;
-        padding: 8rem 0 0 0 ;
+        inset: 0 0 0 72%;
+        padding: 7rem 0 0 0 ;
     }
-    #navbar .links a{
-        font-size: 15px;
-    }
-    #navbar .links a img{
-        height: 17px;
-    }
+}
+
+@media(max-width: 425px){
     /* FOR THE ABSOLUTE IMAGE */
     #works .abs-sign{
         right: 1.7rem;
@@ -635,33 +678,48 @@ body{
     #works .abs-sign p{
         font-size: 11px;
     }
-    /* FOOTER SECTION */
-    #footer{
-        left: 50px;
-    }
-    #footer .logodiv{
-        margin-right: 10px;
-    }
-    #footer .logodiv img{
-        height: 25px;
-    }
-    #footer .git{
-        height: 20px;
-        margin: 0 10px;
-    }
-    #footer .twi{
-        height: 16px;
-    }
-    #footer .ema{
-        height: 32px;
-    }
 }
+
+@media(max-width: 380px){
+    #navbar button{
+        height: 20px;
+        width: 35px;
+        /* right: 2rem;
+        top: 2.8rem; */
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 40px;
+        width: 85px;
+        /* right: -1.2rem;
+        top: 2rem; */
+    } 
+}
+
 @media(max-width: 370px){
     #works .left{
         grid-template-rows: repeat(5, 100px);
         grid-template-columns: repeat(auto-fit, minmax(50px, 50px));
     }
 }
+@media(max-idth: 350px){
+    #navbar button[aria-expanded="true"]{
+        height: 40px;
+        width: 80px;
+    } 
+    #footer .logodiv{
+        margin-right: 10px;
+    }
+    #footer .logodiv img{
+        height: 26px;
+    }
+    #footer .git{
+        height: 20px;
+    }
+    #footer .twi{
+        height: 16px;
+    }
+}
+/* STOPPED AT 350PXXXXX */  
 @media(max-width: 340px){
     #works .left{
         grid-template-rows: repeat(5, 80px);
@@ -719,20 +777,16 @@ body{
     }
     /* FOOTER SECTION */
     #footer .logodiv{
-        margin-right: 3px;
+        margin-right: 5px;
     }
     #footer .logodiv img{
-        height: 23px;
+        height: 24px;
     }
     #footer .git{
-        height: 19px;
-        margin: 0 6px;
+        height: 18px;
     }
     #footer .twi{
-        height: 15px;
-    }
-    #footer .ema{
-        height: 31px;
+        height: 14px;
     }
 }
 @media(max-width: 270px){
@@ -765,6 +819,23 @@ body{
     /* FOR THE ABSOLUTE IMAGE */
     #works .abs-sign{
         display: none;
+    }
+}
+@media(max-width: 250px){
+    #footer{
+        left: 20px;
+    }
+    #footer .logodiv{
+        margin-right: 5px;
+    }
+    #footer .logodiv img{
+        height: 24px;
+    }
+    #footer .git{
+        height: 18px;
+    }
+    #footer .twi{
+        height: 14px;
     }
 }
 @media(max-width: 230px){

@@ -164,8 +164,6 @@
     border: 2px solid #6343E0;
     color: #6343E0;
 }
-
-
 /* FOOTER */
 #footer{
     min-height: 8vh;
@@ -192,9 +190,9 @@
     height: 19px;
     margin-right: 2px;
 }
-#footer .gitlog{
+/* #footer .gitlog{
     margin-right: 12px;
-}
+} */
 /* END OF INDEX.HTML */
 
 /* MEDIA QUERY */
@@ -697,5 +695,121 @@
         margin-right: 8px;
     }
 }
-@media(max-width: 400px){
+@media(max-width: 385px){
+    #hire form .email{
+        width: 145px;
+    }
+    #hire form textarea{
+        width: 270px;
+    }
+    #hire button{
+        width: 270px;
+        font-size: 16px;
+    }
+    #footer .logodiv{
+        margin-right: 10px;
+    }
+    #footer .logodiv img{
+        height: 30px;
+    }
+    #footer .logo{
+        margin-right: 2px;
+        margin-left: 5px;
+    }
+    #footer .git{
+        height: 24px;
+    }
+    #footer .twi{
+        height: 20px;
+    }
+}
+@media(max-width: 370px){
+    .links{
+        inset: 0 0 0 65%;
+    }   
+    #hirenavbar button{
+        height: 35px;
+        width: 35px;
+    }
+    #hirenavbar button[aria-expanded="true"]{
+        height: 35px;
+        right: -40px;
+    }    
+    #hirenavbar .links a{
+        font-size: 17px;
+        font-weight: 400;
+    }
+}
+@media(max-width: 355px){
+    #hirenavbar button{
+        height: 32px;
+        width: 32px;
+    }
+    #hirenavbar button[aria-expanded="true"]{
+        height: 32px;
+        right: -45px;
+        top: 40px;
+    }    
+    #hirenavbar .links a{
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    #hire .main h1{
+        font-size: 13px;
+    }
+    #hire .main li{
+        width: 95%;
+        font-size: 11px;
+        line-height: 15px;
+        margin-bottom: 8px;
+    }
+    #hire .main .left{
+        height: 150px;
+    }
+    #hire form .email{
+        width: 150px;
+        margin-right: 5px;
+    }
+    #hire form .date{
+        width: 85px;
+    }
+    #hire form .email::placeholder,
+    #hire form .date::placeholder{
+        height: 30px;
+    }
+    #hire form .email::placeholder,
+    #hire form .date::placeholder,
+    #hire form textarea::placeholder{
+        font-size: 10px;
+    }
+    #hire form span{
+        margin-bottom: 5px;
+    }
+    #hire form textarea{
+        width: 240px;
+        height: 100px;
+        font-size: 11px;
+    }
+    #hire button{
+        width: 240px;
+        height: 30px;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    #footer .logodiv{
+        margin-right: 5px;
+    }
+    #footer .logodiv img{
+        height: 20px;
+    }
+    #footer .logo{
+        margin-right: 2px;
+        margin-left: 5px;
+    }
+    #footer .git{
+        height: 19px;
+    }
+    #footer .twi{
+        height: 15px;
+    }
 }

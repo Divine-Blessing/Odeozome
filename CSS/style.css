@@ -42,8 +42,8 @@
 }
 .links{
     position: fixed;
-    padding: 200px 0 0 0;
-    inset: 0 0 0 70%;
+    padding: 160px 0 0 0;
+    inset: 0 0 0 80%;
     background-color: transparent;
     transform: translateX(100%);
     transition: transform 350ms ease-in;
@@ -70,10 +70,13 @@
     visibility: visible;
 }
 /* HERO SECTION */
-#hero {
-    min-height: 100vh;
+body{
     background-image: url(../img/hero-bg\ \(2\).png);
     background-repeat: no-repeat;
+    background-size: cover;
+}
+#hero {
+    min-height: 100vh;
     color: white;
     font-family: 'Inter', sans-serif;
     padding: 0 0 0 100px;
@@ -141,17 +144,14 @@
     margin-right: 10px;
 }
 #footer a:hover img{
-    zoom: 130%;
+    transform: scale(1.3) ;
+    transition: transform 250ms ease-in;
 }
 #footer .git{
     height: 24px;
 }
 #footer .twi{
     height: 19px;
-    margin-right: 2px;
-}
-#footer .gitlog{
-    margin-right: 12px;
 }
 /* END OF INDEX.HTML */
 
@@ -166,10 +166,11 @@
         right: -5px;
     }
     .links{
-        padding: 130px 0 0 0;
+        padding: 140px 0 0 0;
+        inset: 0 0 0 80%;
     }
     #navbar .links a{
-        font-size: 18px;
+        font-size: 17px;
     }
     #navbar .links a img{
         height: 22px;
@@ -213,30 +214,37 @@
     #footer .twi{
         height: 18px;
     }
-    #footer .gitlog{
-        margin-right: 14px;
-    }
-    
 }
-@media(max-width: 650px){
+
+@media(max-width: 770px){
     #navbar button{
-        height: 15px;
-        width: 80px;
+        height: 16px;
+        width: 50px;
+        top: 3rem;
+        right: 2rem;
     }
     #navbar button[aria-expanded="true"]{
         height: 40px;
-        top: 42.5px;
-        right: -20.5px;
+        width: 100px;
+        top: 2.3rem;
+        right: -1.3rem;
     }
     .links{
-        padding: 120px 0 0 0;
-        inset: 0 0 0 70%;
+        padding: 8rem 0 0 0;
         backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.6);
     }
     #navbar .links a{
-        font-size: 17px;
         margin-bottom: 15px;
     }
+}
+@media(max-width: 650px){
+    /*
+    .links{
+        padding: 130px 0 0 0;
+        inset: 0 0 0 75%;
+    }
+     */
     #navbar .links a img{
         height: 20px;
     }
@@ -247,7 +255,7 @@
         font-size: 27px;
     }
     #hero h2{
-        font-size: 37px;
+        font-size: 35px;
     }
     #hero p{
         margin: 10px 0 25px 0;
@@ -268,446 +276,226 @@
         font-weight: 300;
     }
 }
-
-
-
-/* ----- HIRE.HTML ----- */
-/* MEDIA QUERY FOR HIRE.HTML */
-@media(max-width: 1280px){
-    #hirenavbar button{
-        height: 18px;
-    }
-    #hirenavbar button[aria-expanded="true"]{
-        height: 40px;
-    }
+@media(max-width: 550px){
     .links{
-        padding: 150px 0 0 0;
+        inset: 0 0 0 75%;
     }
-    #hirenavbar .links a{
-        margin-bottom: 20px;
+    #navbar .links a{
+        font-size: 16px
     }
-    #hire .main{
-        height: 450px;
-        width: 65%;
+    #hero h1{
+        font-size: 25px;
     }
-    #hire .main .left{
-        height: 450px;
-        padding: 0 0 0 30px;
+    #hero h2{
+        font-size: 33px;
     }
-    #hire .main h1{
-        font-size: 22px;
-    }
-    #hire .main li{
-        width: 77%;
-        margin-bottom: 13px;
+    #hero p{
+        margin: 10px 0 25px 0;
         font-size: 15px;
-    }
-    #hire .main .upcurve{
-        left: 44%;
-        top: 32%;
-    }
-    #hire .main .downcurve{
-        bottom: 32%;
-        left: 43%;
-    }
-    #hire .main .right{
-        height: 450px;
-    }
-    #hire .main input{
-        height: 43px;
-        padding: 0 0 0 15px;
-        font-size: 14px;
-    }
-    #hire form .email{     
-        width: 255px;
-    }
-    #hire form textarea{
-        width: 393px;
-        padding: 5px 0 0 10px;
-    }
-    #hire button{
-        width: 393px;
-    }
-}
-@media (max-width: 1235px){
-    #hire form .email{     
-        width: 235px;
-    }
-    #hire form textarea{
-        width: 373px;
-    }
-    #hire button{
-        width: 373px;
-    }
-    #hirenavbar button{
-        width: 85px;
-    }
-    #hirenavbar .links a{
-        font-size: 20px;
-    }
-    .links{
-        inset: 0 0 0 85%;
-    }
-}
-@media(max-width: 1170px){
-    #hire .main{
-        width: 60%;
-    }
-    #hire .main .left{
-        padding: 0 0 0 15px;
-        width: 45%;
-    }
-    #hire .main h1{
-        font-size: 20px;
-        margin-bottom: 12px;
-    }
-    #hire .main li{
-        width: 81%;
-        line-height: 20px;
-        text-align: justify;    
-    }
-    #hire .main .upcurve{
-        left: 270px;
-        top: 100px;
-        height: 35px;
-    }
-    #hire .main .downcurve{
-        bottom: 110px;
-        left: 270px;
-        height: 35px;
-    }
-    #hire .main .right{
-        width: 55%;
-    }
-    #hire form .email{     
-        width: 220px;
-    }
-    #hire form textarea{
-        width: 358px;
-    }
-    #hire button{
-        width: 358px;
-    }
-}
-@media(max-width: 1115px){
-    #hire .main{
-        width: 65%;
-    }
-    #hire .main h1{
-        font-size: 19px;
-    }
-    #hire .main li{
+        text-align: justify;
         width: 75%;
-    }
-    #hire .main .upcurve{
-        left: 275px;
-        top: 115px;
-    }
-    #hire .main .downcurve{
-        bottom: 130px;
-        left: 275px;
-    }
-    #hire form .email{     
-        width: 220px;
-    }
-    #hire form textarea{
-        width: 358px;
-    }
-    #hire button{
-        width: 358px;
-    }
-}
-
-@media(max-width: 1070px){
-    #hire .main .upcurve{
-        left: 255px;
-        top: 110px;
-    }
-    #hire .main .downcurve{
-        bottom: 130px;
-        left: 255px;
-    }
-}
-@media(max-width: 1020px){
-    #hire .main{
-        width: 70%;
-    }
-    #hire .main h1{
-        font-size: 18px;
-        font-weight: 400;
-    }
-    #hire .main li{
-        width: 75%;
-        font-weight: 300;
-        font-size: 14px;
-    }
-    #hire .main .upcurve{
-        left: 260px;
-        top: 115px;
-    }
-    #hire .main .downcurve{
-        bottom: 130px;
-        left: 260px;
-    }
-    #hirenavbar .links a{
-        font-size: 17px;
-    }
-    .links{
-        inset: 0 0 0 85%;
-    }
-    #hirenavbar button{
-        height: 18px;
-        width: 70px;
-        top: 50px;
-        right: 35px;
-    }
-    #hirenavbar button[aria-expanded="true"]{
-        height: 40px;
-        top: 40px;
-        right: -25px;
-    }
-}
-@media(max-width: 940px){
-    #hire .main .left{
-        width: 42%;
-    }
-    #hire .main h1{
-        font-size: 17px;
-    }
-    #hire .main li{
-        width: 70%;
-        font-size: 14px;
-    }
-    #hire .main .upcurve{
-        left: 223px;
-        top: 110px;
-    }
-    #hire .main .downcurve{
-        bottom: 130px;
-        left: 223px;
-    }
-    #hire .main .right{
-        width: 53%;
-    }
-    #hire form .email{     
-        width: 225px;
-    }
-    #hire form .date{
-        width: 115px;
-    }
-    #hire form textarea{
-        width: 348px;
-    }
-    #hire button{
-        width: 348px;
-    }
-}
-@media(max-width: 910px){
-    #hire form .email{
-        width: 215px;
-    }
-}
-@media(max-width: 900px){
-    #hire form .email{     
-        width: 210px;
-    }
-}
-@media(max-width: 880px){
-    #hire form .email{
-        width: 200px;
-    }
-    #hire form textarea{
-        width: 325px;
-    }
-    #hire button{
-        width: 325px;
-    }
-    #hire .main .upcurve{
-        left: 210px;
-        top: 110px;
-    }
-    #hire .main .downcurve{
-        bottom: 110px;
-        left: 205px;
-    }
-}
-
-@media(max-width: 850px){
-    #hire .main{
-        height: 450px;
-        display: flex;
-        flex-direction: column;
-        padding: 25px 10px;
-    }
-    #hire .main .left{
-        width: 100%;
-        padding: 0 0 0 35px;
-        height: 200px;
-    }
-    #hire .main img{
-        display: none;
-    }
-    #hire .main li{
-        width: 85%;
-        margin-bottom: 10px;
-        font-size: 15px;
-    }
-    #hire .main .right{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        height: 250px;
-    }
-    #hire .main input{
-        font-weight: 600;
-        font-size: 14px;
-    }
-    #hire form textarea{
-        height: 130px;
-        font-weight: 600;
-    }
-    #hirenavbar button{
-        width: 40px;
-        top: 50px;
-        right: 45px;
-    }
-    #hirenavbar button[aria-expanded="true"]{
-        top: 38px;
-        right: -38px;
-    }
-    .links{
-        padding: 110px 0 0 0;
-    }
-    #hirenavbar .links a{
-        margin-bottom: 17px;
-        font-size: 16px;
-    }
-    #hirenavbar .links a img{
-        height: 20px;
-        margin-left: 5px;
-    }
-}
-/* I AM NOW AT TABLET SIZE */
-@media(max-width: 768px){
-    .links{
-        inset: 0 0 0 80%;
-        background-color: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(5px);
-        /* z-index: 100; */
-    }   
-    #hirenavbar .links a{
-        z-index: 100;
-    }
-    #hirenavbar button[aria-expanded="true"]{
-        height: 35px;
-    }
-    #hire .main h1{
-        font-size: 16px;
-        font-weight: 400;
-        letter-spacing: .5px;
-    }
-    #hire .main li{
-        width: 78%;
-        font-size: 15px;
-        font-weight: 200;
-    }
-    #hire form textarea::placeholder{
-        font-size: 13px;
-    }
-    #hire .main input{
-        font-weight: 600;
-        font-size: 14px;
-        height: 35px;
-    }
-    #hire form textarea{
-        height: 120px;
-        font-weight: 600;
-    }
-    #hire button{
-        height: 35px;
-    }
-}
-
-@media(max-width: 600px){
-    #hire .main{
-        width: 60%;
-        height: 70vh;
-    }
-    .links{
-        inset: 0 0 0 80%;
-        z-index: 100;
-    }   
-    #hirenavbar .links a{
-        font-size: 16px;
-    }
-    #hire .main li{
-        font-size: 14px;
-    }
-    #hire .main input::placeholder,
-    #hire form textarea::placeholder{
-        font-size: 12px;
-    }
-    #hire .main input{
-        font-weight: 600;
-        font-size: 14px;
-        height: 35px;
-    }
-    #hire form textarea{
-        height: 120px;
-        font-weight: 600;
-    }
-    #hire button{
-        height: 35px;
-        font-size: 18px;
-    }
-}
-
-@media(max-width: 565px){
-    #hire form .email{
-        width: 180px;
-    }
-    #hire form textarea{
-        width: 305px;
-    }
-    #hire button{
-        width: 305px;
-    }
-}
-@media(max-width: 555px){
-    #hire .main li{
-        font-size: 14px;
-        width: 90%;
-        line-height: 18px;
-    }
-    #hire .main .left{
-        padding: 2px ;
-    }
-}
-@media(max-width: 530px){
-    #hire form .email{
-        width: 160px;
-    }    
-    #hire form textarea{
-        width: 285px;
-    }
-    #hire button{
-        width: 285px;
     }
 }
 @media(max-width: 500px){
-    #hire form .email{
-        width: 140px;
-    }    
-    #hire form textarea{
-        width: 265px;
+    #navbar button{
+        height: 20px;
+        width: 40px;
+        right: 2rem;
+        top: 2.8rem;
     }
-    #hire button{
-        width: 265px;
+    #navbar button[aria-expanded="true"]{
+        height: 40px;
+        width: 90px;
+        right: -1.2rem;
+        top: 2rem;
     }
-    #hire .main{
-        width: 80%;
-        height: 65vh;
+    .links{
+        inset: 0 0 0 78%;
+    }
+    #navbar .links a{
+        font-size: 15px;
+    }
+    #navbar .links a img{
+        display: none;
+    }
+    #hero {
+        padding: 0 0 0 50px;
+    }
+    #hero p{
+        margin: 10px 0 25px 0;
+        font-size: 14px;
+        text-align: justify;
+        line-height: 20px;
+        width: 72%;
+    }
+}
+@media(max-width: 460px){
+    .links{
+        inset: 0 0 0 72%;
+        padding: 7rem 0 0 0 ;
     }
 }
 
-/* ----- END OF HIRE.HTML ----- */
+@media(max-width: 450px){
+    #hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 0 0px;
+    }
+    #hero h1{
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+    #hero h2{
+        font-size: 30px;
+    }
+    #hero p{
+        text-align: center;
+        width: 75%;
+    }
+    #hero a{
+        height: 40px;
+        width: 120px;
+    }
+    #hero .hire{
+        margin-right: 10px;
+    }
+}
+@media(max-width: 380px){
+    #navbar button{
+        height: 20px;
+        width: 35px;
+        /* right: 2rem;
+        top: 2.8rem; */
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 40px;
+        width: 85px;
+    }    
+}
+@media(max-width: 350px){
+    #navbar button[aria-expanded="true"]{
+        height: 40px;
+        width: 80px;
+    } 
+    #hero h1{
+        font-size: 21px;
+        margin-bottom: 8px;
+    }
+    #hero h2{
+        font-size: 28px;
+    }
+    #hero p{
+        width: 80%;
+        font-size: 13px;
+    }
+    #hero a{
+        height: 35px;
+        width: 100px;
+        font-size: 12px;
+    }
+    #footer .logodiv{
+        margin-right: 10px;
+    }
+    #footer .logodiv img{
+        height: 26px;
+    }
+    #footer .git{
+        height: 20px;
+    }
+    #footer .twi{
+        height: 16px;
+    }
+}
+/* STOPPED AT 350PXXXXX */
+
+@media(max-width: 300px){
+    #hero h1{
+        font-size: 20px;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+    }
+    #hero h2{
+        font-size: 26px;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+    }
+    #hero p{
+        width: 85%;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    #hero a{
+        height: 35px;
+        width: 90px;
+        font-size: 11px;
+    }
+    #footer .logodiv{
+        margin-right: 5px;
+    }
+    #footer .logodiv img{
+        height: 24px;
+    }
+    #footer .git{
+        height: 18px;
+    }
+    #footer .twi{
+        height: 14px;
+    }
+    #navbar button{
+        height: 12px;
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 34px;
+    }
+    .links{
+        inset: 0 0 0 65%;
+    }
+    #navbar .links a{
+        font-size: 14px;
+    }
+}
+@media(max-width: 250px){
+    #hero h1{
+        font-size: 19px;
+        margin-bottom: 5px;
+        font-weight: 300;
+    }
+    #hero h2{
+        font-size: 24px;
+    }
+    #hero p{ 
+        width: 85%;
+        margin-top: 15px;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: .5px;
+        font-weight: lighter;
+    }
+    #navbar button{
+        height: 12px;
+        width: 50px;
+        right: 5px;
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 33px;
+        top: 44px;
+        right: -65px;
+    }
+    #footer{
+        left: 20px;
+    }
+    #footer .logodiv{
+        margin-right: 5px;
+    }
+    #footer .logodiv img{
+        height: 24px;
+    }
+    #footer .git{
+        height: 18px;
+    }
+    #footer .twi{
+        height: 14px;
+    }
+}
