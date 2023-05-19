@@ -181,7 +181,8 @@
     margin-right: 10px;
 }
 #footer a:hover img{
-    zoom: 130%;
+    transform: scale(1.3) ;
+    transition: transform 250ms ease-in;
 }
 #footer .git{
     height: 24px;
@@ -190,9 +191,6 @@
     height: 19px;
     margin-right: 2px;
 }
-/* #footer .gitlog{
-    margin-right: 12px;
-} */
 /* END OF INDEX.HTML */
 
 /* MEDIA QUERY */
@@ -595,6 +593,15 @@
     }
 }
 
+@media(max-width: 650px){
+    #footer{
+        left: 50px;
+    }
+    #footer .logodiv{
+        margin-right: 10px;
+    }
+}
+
 @media(max-width: 600px){
     #hire .main{
         height: 65vh;
@@ -674,10 +681,20 @@
         height: 65vh;
     }
 }
-@media(max-width: 425px){
+
+@media(max-width: 460px){
     .links{
-        inset: 0 0 0 70%;
-    }   
+        inset: 0 0 0 0%;
+        padding: 12rem 0 0 0 ;
+        backdrop-filter: blur(15px);
+    }
+    #navbar .links a {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 425px){
     #hire form .email{
         width: 165px;
     }    
@@ -696,6 +713,10 @@
     }
 }
 @media(max-width: 385px){
+    #navbar .links a {
+        font-size: 18px;
+        margin-bottom: 18px;
+    }  
     #hire form .email{
         width: 145px;
     }
@@ -724,9 +745,6 @@
     }
 }
 @media(max-width: 370px){
-    .links{
-        inset: 0 0 0 65%;
-    }   
     #hirenavbar button{
         height: 35px;
         width: 35px;

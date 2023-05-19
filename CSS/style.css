@@ -239,12 +239,6 @@ body{
     }
 }
 @media(max-width: 650px){
-    /*
-    .links{
-        padding: 130px 0 0 0;
-        inset: 0 0 0 75%;
-    }
-     */
     #navbar .links a img{
         height: 20px;
     }
@@ -271,9 +265,8 @@ body{
     #footer{
         left: 50px;
     }
-    #footer a{
-        font-size: 16px;
-        font-weight: 300;
+    #footer .logodiv{
+        margin-right: 10px;
     }
 }
 @media(max-width: 550px){
@@ -331,8 +324,13 @@ body{
 }
 @media(max-width: 460px){
     .links{
-        inset: 0 0 0 72%;
-        padding: 7rem 0 0 0 ;
+        inset: 0 0 0 0%;
+        padding: 12rem 0 0 0 ;
+        backdrop-filter: blur(15px);
+    }
+    #navbar .links a {
+        font-size: 20px;
+        margin-bottom: 20px;
     }
 }
 
@@ -366,13 +364,15 @@ body{
     #navbar button{
         height: 20px;
         width: 35px;
-        /* right: 2rem;
-        top: 2.8rem; */
     }
     #navbar button[aria-expanded="true"]{
         height: 40px;
         width: 85px;
-    }    
+    }  
+    #navbar .links a {
+        font-size: 18px;
+        margin-bottom: 18px;
+    }  
 }
 @media(max-width: 350px){
     #navbar button[aria-expanded="true"]{
@@ -408,9 +408,28 @@ body{
         height: 16px;
     }
 }
-/* STOPPED AT 350PXXXXX */
+/* STOPPED AT 350ssssssssssssssssssssssssssssPXXXXX */
 
 @media(max-width: 300px){
+    #navbar button{
+        height: 20px;
+        width: 30px;
+        right: 2rem;
+        top: 2.8rem;
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 30px;
+        width: 75px;
+        right: -1rem;
+        top: 2.2rem;
+    } 
+    .links{
+        padding: 9rem 0 0 0;
+    }
+    #navbar .links a {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }  
     #hero h1{
         font-size: 20px;
         margin-bottom: 8px;
@@ -443,20 +462,18 @@ body{
     #footer .twi{
         height: 14px;
     }
-    #navbar button{
-        height: 12px;
-    }
-    #navbar button[aria-expanded="true"]{
-        height: 34px;
-    }
-    .links{
-        inset: 0 0 0 65%;
-    }
-    #navbar .links a{
-        font-size: 14px;
-    }
 }
 @media(max-width: 250px){
+    #navbar button{
+        height: 12px;
+        width: 50px;
+        right: 5px;
+    }
+    #navbar button[aria-expanded="true"]{
+        height: 33px;
+        top: 44px;
+        right: -65px;
+    }
     #hero h1{
         font-size: 19px;
         margin-bottom: 5px;
@@ -472,16 +489,6 @@ body{
         line-height: 19px;
         letter-spacing: .5px;
         font-weight: lighter;
-    }
-    #navbar button{
-        height: 12px;
-        width: 50px;
-        right: 5px;
-    }
-    #navbar button[aria-expanded="true"]{
-        height: 33px;
-        top: 44px;
-        right: -65px;
     }
     #footer{
         left: 20px;
