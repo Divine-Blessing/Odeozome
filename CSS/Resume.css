@@ -1315,6 +1315,30 @@ body{
         font-size: 17px;
         margin-bottom: 15px;
     }  
+    #resume .left h1{
+        font-size: 14px;
+    }
+    #resume .left h3{
+        font-size: 11px;
+    }
+    #resume .left h2{
+        font-size: 14px;
+    }
+    #resume .left h4{
+        line-height: 16px;
+    }
+    #resume .three ul a{
+        font-size: 11px;
+        line-height: 10px;
+        margin-bottom: 3px;
+    }
+    #resume .four h6{
+        width: 40%;
+    }
+    #resume .four h3{
+        font-size: 11px;
+        line-height: 16px;
+    }
     #footer .logodiv{
         margin-right: 5px;
     }
