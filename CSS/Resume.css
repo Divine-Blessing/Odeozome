@@ -951,6 +951,7 @@ body{
         inset: 0 0 0 0%;
         padding: 12rem 0 0 0 ;
         backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
     }
     #navbar .links a {
         font-size: 20px;
@@ -1083,28 +1084,6 @@ body{
     }
 }
 @media(max-width: 400px){
-    /* #navbar button{
-        height: 20px;
-        width: 35px;
-        right: 2rem;
-        top: 2.3rem;
-    }
-    #navbar button[aria-expanded="true"]{
-        height: 35px;
-        width: 85px;
-        right: -1.2rem;
-        top: 1.6rem;
-    }
-    .links{
-        inset: 0 0 0 72%;
-    }
-    #navbar .links{
-        padding: 120px 0 0 0;
-    }
-    #navbar .links a{
-        font-size: 14px;
-        margin-bottom: 15px;
-    } */
     #resume .left h1{
         font-size: 18px;
     }
