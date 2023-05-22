@@ -456,6 +456,7 @@ body{
         inset: 0 0 0 0%;
         padding: 12rem 0 0 0 ;
         backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
     }
     #navbar .links a {
         font-size: 20px;
@@ -465,8 +466,30 @@ body{
         height: 60%;
     }
     #footer{
-        left: 50px;
+        min-height: 13vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: normal;
+        position: relative;
+        bottom: 0;
+        left: 0;
     }
+    #footer .logodiv{
+        margin-right: 0px;
+        margin-bottom: 3px;
+    }
+    #footer .logodiv img{
+        height: 28px;
+    }
+    #footer a img{
+        margin-right: 8px;
+    }
+    #footer .git{
+        height: 20px;
+    }
+    #footer .twi{
+        height: 15px;
+    }    
 }
 
 @media (max-width: 380px){
@@ -488,17 +511,8 @@ body{
         height: 40px;
         width: 80px;
     } 
-    #footer .logodiv{
-        margin-right: 10px;
-    }
     #footer .logodiv img{
         height: 26px;
-    }
-    #footer .git{
-        height: 20px;
-    }
-    #footer .twi{
-        height: 16px;
     }
 }
 @media (max-width: 300px){
@@ -536,9 +550,6 @@ body{
         margin-top: 28px;
         font-size: 11px;
     }
-    #footer .logodiv{
-        margin-right: 5px;
-    }
     #footer .logodiv img{
         height: 24px;
     }
@@ -550,7 +561,7 @@ body{
     }
 }
 @media(max-width: 250px){
-    #footer{
+    /* #footer{
         left: 20px;
     }
     #footer .logodiv{
@@ -564,5 +575,5 @@ body{
     }
     #footer .twi{
         height: 14px;
-    }
+    } */
 }

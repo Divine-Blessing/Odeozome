@@ -687,11 +687,37 @@
         inset: 0 0 0 0%;
         padding: 12rem 0 0 0 ;
         backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
     }
     #navbar .links a {
         font-size: 20px;
         margin-bottom: 20px;
     }
+    #footer{
+        min-height: 13vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: normal;
+        position: relative;
+        bottom: 0;
+        left: 0;
+    }
+    #footer .logodiv{
+        margin-right: 0px;
+        margin-bottom: 3px;
+    }
+    #footer .logodiv img{
+        height: 28px;
+    }
+    #footer a img{
+        margin-right: 8px;
+    }
+    #footer .git{
+        height: 20px;
+    }
+    #footer .twi{
+        height: 15px;
+    }    
 }
 
 @media(max-width: 425px){
@@ -814,20 +840,37 @@
         font-size: 14px;
         margin-top: 5px;
     }
-    #footer .logodiv{
-        margin-right: 5px;
-    }
     #footer .logodiv img{
-        height: 20px;
+        height: 26px;
     }
-    #footer .logo{
-        margin-right: 2px;
-        margin-left: 5px;
+}
+@media(max-width: 300px){
+    #hirenavbar button{
+        height: 20px;
+        width: 30px;
+        right: 2rem;
+        top: 2.8rem;
+    }
+    #hirenavbar button[aria-expanded="true"]{
+        height: 30px;
+        width: 75px;
+        right: -1rem;
+        top: 2.2rem;
+    } 
+    .links{
+        padding: 9rem 0 0 0;
+    }
+    #hirenavbar .links a {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }  
+    #footer .logodiv img{
+        height: 24px;
     }
     #footer .git{
-        height: 19px;
+        height: 18px;
     }
     #footer .twi{
-        height: 15px;
+        height: 14px;
     }
 }

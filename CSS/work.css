@@ -667,11 +667,37 @@ body{
         inset: 0 0 0 0%;
         padding: 12rem 0 0 0 ;
         backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
     }
     #navbar .links a {
         font-size: 20px;
         margin-bottom: 20px;
     }
+    #footer{
+        min-height: 13vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: normal;
+        position: relative;
+        bottom: 0;
+        left: 0;
+    }
+    #footer .logodiv{
+        margin-right: 0px;
+        margin-bottom: 3px;
+    }
+    #footer .logodiv img{
+        height: 28px;
+    }
+    #footer a img{
+        margin-right: 8px;
+    }
+    #footer .git{
+        height: 20px;
+    }
+    #footer .twi{
+        height: 15px;
+    }    
     
 }
 
@@ -711,17 +737,8 @@ body{
         height: 40px;
         width: 80px;
     } 
-    #footer .logodiv{
-        margin-right: 10px;
-    }
     #footer .logodiv img{
         height: 26px;
-    }
-    #footer .git{
-        height: 20px;
-    }
-    #footer .twi{
-        height: 16px;
     }
 }
 
@@ -736,13 +753,6 @@ body{
     /* FOR THE ABSOLUTE IMAGE */
     #works .abs-sign{
         right: 1rem;
-    }
-    /* FOOTER SECTION */
-    #footer{
-        left: 25px;
-    }
-    #footer .logodiv{
-        margin-right: 3px;
     }
 }
 @media(max-width: 300px){
@@ -777,10 +787,6 @@ body{
     }
     #works .abs-sign p{
         font-size: 9px;
-    }
-    /* FOOTER SECTION */
-    #footer .logodiv{
-        margin-right: 5px;
     }
     #footer .logodiv img{
         height: 24px;

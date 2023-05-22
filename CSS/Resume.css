@@ -957,6 +957,31 @@ body{
         font-size: 20px;
         margin-bottom: 20px;
     }
+    #footer{
+        min-height: 13vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: normal;
+        position: relative;
+        bottom: 0;
+        left: 0;
+    }
+    #footer .logodiv{
+        margin-right: 0px;
+        margin-bottom: 3px;
+    }
+    #footer .logodiv img{
+        height: 28px;
+    }
+    #footer a img{
+        margin-right: 8px;
+    }
+    #footer .git{
+        height: 20px;
+    }
+    #footer .twi{
+        height: 15px;
+    } 
     
 }
 
@@ -1217,17 +1242,8 @@ body{
     #resume .four hr{
         height: 75px;
     }
-    #footer .logodiv{
-        margin-right: 10px;
-    }
     #footer .logodiv img{
         height: 26px;
-    }
-    #footer .git{
-        height: 20px;
-    }
-    #footer .twi{
-        height: 16px;
     }
 }
 
@@ -1318,9 +1334,6 @@ body{
         font-size: 11px;
         line-height: 16px;
     }
-    #footer .logodiv{
-        margin-right: 5px;
-    }
     #footer .logodiv img{
         height: 24px;
     }
@@ -1332,7 +1345,7 @@ body{
     }
 }
 @media(max-width: 250px){
-    #footer{
+    /* #footer{
         left: 20px;
     }
     #footer .logodiv{
@@ -1346,7 +1359,7 @@ body{
     }
     #footer .twi{
         height: 14px;
-    }
+    } */
 }
 
 /* FOR 250PX REMEMBER TO WORK ON THE CLOSE BUTTON'S ABSOLUTE PLACEMENT.  */
