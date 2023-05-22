@@ -408,7 +408,6 @@ body{
         height: 16px;
     }
 }
-/* STOPPED AT 350ssssssssssssssssssssssssssssPXXXXX */
 
 @media(max-width: 300px){
     #navbar button{
@@ -463,17 +462,8 @@ body{
         height: 14px;
     }
 }
+
 @media(max-width: 250px){
-    #navbar button{
-        height: 12px;
-        width: 50px;
-        right: 5px;
-    }
-    #navbar button[aria-expanded="true"]{
-        height: 33px;
-        top: 44px;
-        right: -65px;
-    }
     #hero h1{
         font-size: 19px;
         margin-bottom: 5px;

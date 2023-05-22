@@ -799,18 +799,6 @@ body{
         width: 83%;
         padding: 3rem 1.2rem;
     }
-    /* THE NAVBAR */
-    #navbar button{
-        height: 20px;
-        width: 30px;
-        right: .8rem;
-    }
-    #navbar button[aria-expanded="true"]{
-        height: 30px;
-        width: 70px;
-        top: 2.5rem;
-        right: -1.9rem;
-    }
     /* FOR THE ABSOLUTE IMAGE */
     #works .abs-sign{
         display: none;
