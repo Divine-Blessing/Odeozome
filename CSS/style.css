@@ -330,7 +330,7 @@ body{
         inset: 0 0 0 0%;
         padding: 12rem 0 0 0 ;
         backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(12px);
     }
     #navbar .links a {
         font-size: 20px;

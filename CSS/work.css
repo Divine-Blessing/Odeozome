@@ -742,7 +742,6 @@ body{
     }
 }
 
-/* STOPPED AT 350ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssPXXXXX */  
 @media(max-width: 340px){
     #works .left{
         grid-template-rows: repeat(5, 80px);

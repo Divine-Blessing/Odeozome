@@ -951,7 +951,7 @@ body{
         inset: 0 0 0 0%;
         padding: 12rem 0 0 0 ;
         backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(12px);
     }
     #navbar .links a {
         font-size: 20px;
@@ -1344,22 +1344,3 @@ body{
         height: 14px;
     }
 }
-@media(max-width: 250px){
-    /* #footer{
-        left: 20px;
-    }
-    #footer .logodiv{
-        margin-right: 5px;
-    }
-    #footer .logodiv img{
-        height: 24px;
-    }
-    #footer .git{
-        height: 18px;
-    }
-    #footer .twi{
-        height: 14px;
-    } */
-}
-
-/* FOR 250PX REMEMBER TO WORK ON THE CLOSE BUTTON'S ABSOLUTE PLACEMENT.  */
