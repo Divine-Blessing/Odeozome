@@ -16,7 +16,7 @@ menuBar.addEventListener('click', () => {
 
 
 // FADE-IN EFFECT
-AOS.init();
+// AOS.init();
 
 // FADE-IN EFFECT IN RESUME.HTML
 // const faders = document.querySelectorAll('.fade-in');
@@ -44,3 +44,35 @@ AOS.init();
 // faders.forEach(fader => {
 //     appearOnScroll.observe(fader);
 // })
+
+// TRIAL AND ERROR
+// const fadeIns =
+// document.querySelectorAll('.fade-in');
+// function debounce(func, wait = 20, immediately = true){
+//     let timeout;
+//     return function(){
+//         const context = this, args = arguments;
+//         const later = function() {
+//             timeout = null;
+//             if(!immediate) func.apply(context, args);   
+//         };
+//         const callNow = immediate && !timeout;
+//         clearTimeout(timeout);
+//         timeout = setTimeout(later, wait);
+//         if (callNow) func.apply (context, args);
+//     };
+// }
+// function checkSlide(){
+//     fadeIns.forEach(fadeIn => {
+//         const fadeInTop =fadeIn.getBoundingClientRect().top;
+//         const fadeInBottom = fadeIn.getBoundingClientRect().bottom;
+//         const fadeInHeight = fadeIn.clientHeight;
+//         const isHalfShown = fadeInTop + fadeInHeight
+//     })
+// }
+
+var loader = document.getElementById("preloader");
+
+window.addEventListener("load", function(){
+    loader.style.display = "none";
+})

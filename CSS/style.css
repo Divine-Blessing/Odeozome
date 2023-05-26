@@ -11,6 +11,71 @@
     font-family: 'Raleway', sans-serif;
     font-family: 'Inter', sans-serif;
 }
+body{
+    background-image: url(../img/hero-bg\ \(2\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* BEGINNING OF PAGE LOADER */
+#preloader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    position: fixed;
+    z-index: 1000;
+}
+#preloader .ring{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    animation: ring 2s linear infinite;
+}
+@keyframes ring {
+    0%{
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #24165e;
+    }
+    50%{
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #6343E0;
+    }
+    100%{
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px #2e2e57;
+    }
+}
+#preloader .ring::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+#preloader .load{
+    color: rgb(161, 161, 161);
+    font-family: 'Kalam', cursive;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* line-height: 200px; */
+    animation: text 3s ease-in-out infinite;
+}
+@keyframes text{
+    50%{
+        color: black;
+    }
+}
+/* END OF LOADER */
 #navbar{
     min-height: 10vh;
     width: 100%;
@@ -70,11 +135,6 @@
     visibility: visible;
 }
 /* HERO SECTION */
-body{
-    background-image: url(../img/hero-bg\ \(2\).png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 #hero {
     min-height: 100vh;
     color: white;
@@ -220,6 +280,14 @@ body{
 }
 
 @media(max-width: 770px){
+    #preloader .ring{
+        height: 150px;
+        width: 150px;
+    }
+    #preloader .load{
+        font-size: 19px;
+    }
+    /* END OF LOADER */
     #navbar button{
         height: 16px;
         width: 50px;
@@ -326,6 +394,14 @@ body{
     }
 }
 @media(max-width: 460px){
+    #preloader .ring{
+        height: 130px;
+        width: 130px;
+    }
+    #preloader .load{
+        font-size: 17px;
+    }
+    /* END OF LOADER */
     .links{
         inset: 0 0 0 0%;
         padding: 12rem 0 0 0 ;
